@@ -4,7 +4,7 @@ namespace Laracore\Admin;
 
 use Illuminate\Support\ServiceProvider;
 
-class adminServiceProvider extends ServiceProvider
+class AdminServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
@@ -13,7 +13,7 @@ class adminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        dd('a');
     }
 
     /**
