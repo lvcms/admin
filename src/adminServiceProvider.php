@@ -14,14 +14,13 @@ class AdminServiceProvider extends ServiceProvider
     public function boot()
     {
           $this->mergeConfigFrom(
-              __DIR__.'/../../config/administrator.php', 'administrator'
+              __DIR__.'/Config/admin.php', 'admin'
           );
-
-          $this->loadTranslationsFrom(__DIR__.'/../../lang', 'administrator');
-
           $this->publishes([
-              __DIR__.'/../../config/admin.php' => config_path('admin.php'),
+              __DIR__.'/Config/admin.php' => config_path('admin.php'),
           ]);
+          $this->loadRoutesFrom(__DIR__.'/Routes/web.php');
+          $this->loadRoutesFrom(__DIR__.'/Routes/api.php');
     }
 
     /**

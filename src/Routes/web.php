@@ -15,8 +15,9 @@
 | Admin后台路由设置 routes
 |--------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'admin', 'middleware' => 'web', 'as' => 'admin'], function () {
+Route::group(['domain' => config('admin.domain'), 'prefix' => config('admin.uri'), 'middleware' => 'web', 'as' => 'admin'], function () {
     Route::get('/{vue_capture?}', function () {
-        return view('core::index', [ 'model' => 'admin' ]);
+        return 'a';
+        // return view('core::index', [ 'model' => 'admin' ]);
     })->where('vue_capture', '[\/\w\.-]*');
 });
