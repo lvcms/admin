@@ -1,7 +1,7 @@
 {
     "name": "laracore/admin",
     "type": "library",
-    "description": ":package_description",
+    "description": ":后台管理系统 admin 使用自动构建html",
     "keywords": [
         "laracore",
         "admin"
@@ -44,9 +44,16 @@
             "dev-master": "1.0-dev"
         },
         "laracore": {
+            "name": "admin",
+            "title": "后台管理系统",
+            "description": "后台管理系统 admin 使用自动构建html",
+            "author": "BigRocs",
+            "version": "1.0.1",
             "providers": [
                 "Laracore\\Admin\\AdminServiceProvider"
-            ]
+            ],
+            "install": "laracore:admin:install",
+            "uninstall": "laracore:admin:uninstall"
         }
     },
     "config": {
