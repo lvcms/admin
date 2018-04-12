@@ -17,6 +17,6 @@
 */
 Route::group(['domain' => config('admin.domain'), 'prefix' => config('admin.uri'), 'middleware' => 'web', 'as' => 'admin'], function () {
     Route::get('/{vue_capture?}', function () {
-        return view('admin::index', [ 'model' => 'admin' ]);
+        return view('admin::index', [ 'model' => 'admin', 'apiUrl' => route('api.admin.main') ]);
     })->where('vue_capture', '[\/\w\.-]*');
 });

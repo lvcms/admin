@@ -16,7 +16,7 @@
 @endif
     <script>
         window.config = {
-            apiUrl: '/api/{{$model}}/main',
+            apiUrl: '{{ $apiUrl }}',
 @if (!empty($resources['config']))
   @foreach ($resources['config'] as $key => $config)
           {{ $key }}: {!! json_encode($config) !!},
@@ -41,8 +41,6 @@
   @endforeach
 @endif
   <!-- 渲染插件Js End -->
-    <script type=text/javascript src={{ asset('/vendor/'.$model.'/js/manifest.min.js') }}></script>
-    <script type=text/javascript src={{ asset('/vendor/'.$model.'/js/vendor.min.js') }}></script>
     <script type=text/javascript src={{ asset('/vendor/'.$model.'/js/app.min.js') }}></script>
 </body>
 </html>
