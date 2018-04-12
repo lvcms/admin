@@ -12,6 +12,6 @@
 */
 Route::group(['prefix' => 'api', 'middleware' => 'api', 'namespace' => 'Laracore\Admin\App\Http\Controllers\Api', 'as' => 'api.'], function () {
     Route::group([ 'prefix' => config('admin.uri'), 'as' => 'admin.'], function () {
-        Route::post('main', [ 'as' => 'main', 'uses' => 'MainController@index']);
+        Route::get('main', [ 'as' => 'main', 'uses' => 'MainController@index']);
     });
 });
