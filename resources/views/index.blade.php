@@ -16,7 +16,7 @@
 @endif
     <script>
         window.config = {
-            apiUrl: '{{ $apiUrl }}',
+            graphql: "{{ url(config('graphql.prefix')) }}",
 @if (!empty($resources['config']))
   @foreach ($resources['config'] as $key => $config)
           {{ $key }}: {!! json_encode($config) !!},

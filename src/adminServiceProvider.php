@@ -20,8 +20,6 @@ class AdminServiceProvider extends ServiceProvider
         $this->publishes([
               __DIR__.'/Config/admin.php' => config_path('admin.php'),
           ]);
-        $this->loadRoutesFrom(__DIR__.'/Routes/web.php');
-        $this->loadRoutesFrom(__DIR__.'/Routes/api.php');
 
         //视图路由
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
