@@ -17,10 +17,14 @@ class AdminServiceProvider extends ServiceProvider
               __DIR__.'/Config/admin.php',
               'admin'
           );
+        $this->mergeConfigFrom(
+              __DIR__.'/Config/admin/vue-router.php',
+              'admin.vue-router'
+          );
         $this->publishes([
               __DIR__.'/Config/admin.php' => config_path('admin.php'),
           ]);
-
+dd(config('admin'));
         //视图路由
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
     }
