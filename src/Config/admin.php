@@ -1,6 +1,9 @@
 <?php
 
 return [
+    // 模块名称
+    'name' => 'admin',
+    
     // 后台的 URI 入口
     'uri' => 'admin',
 
@@ -11,5 +14,5 @@ return [
     'title' => env('APP_NAME', 'Laravel'),
 
     // 模型配置信息文件存放目录
-    'model_config_path' => config_path('admini'),
+    'model_config_path' => config_path('admin'),
 ];
