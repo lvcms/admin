@@ -1,4 +1,4 @@
-\<?php
+<?php
 /**
  * vue_router 参考 vue 官网配置
  * https://router.vuejs.org/zh-cn/
