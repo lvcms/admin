@@ -2,9 +2,9 @@
 
 namespace Laracore\Admin;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
-class AdminServiceProvider extends ServiceProvider
+class ServiceProvider extends LaravelServiceProvider
 {
     /**
      * Perform post-registration booting of services.
