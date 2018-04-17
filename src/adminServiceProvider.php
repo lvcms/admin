@@ -24,9 +24,6 @@ class AdminServiceProvider extends ServiceProvider
         $this->publishes([
               __DIR__.'/Config/admin.php' => config_path('admin.php'),
           ]);
-dd(config('admin'));
-        //视图路由
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
     }
 
     /**
