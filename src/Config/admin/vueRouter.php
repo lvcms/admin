@@ -1,6 +1,6 @@
-<?php
+\<?php
 /**
- * vue-router 参考 vue 官网配置
+ * vue_router 参考 vue 官网配置
  * https://router.vuejs.org/zh-cn/
  */
 return [

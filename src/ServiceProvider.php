@@ -18,8 +18,8 @@ class ServiceProvider extends LaravelServiceProvider
               'admin'
           );
         $this->mergeConfigFrom(
-              __DIR__.'/Config/admin/vue-router.php',
-              'admin.vue-router'
+              __DIR__.'/Config/admin/vueRouter.php',
+              'admin.vueRouter'
           );
         $this->publishes([
               __DIR__.'/Config/admin.php' => config_path('admin.php'),
