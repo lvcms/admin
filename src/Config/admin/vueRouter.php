@@ -12,7 +12,7 @@ return [
           'path'  =>  config('admin.uri'),
           'name'  =>  config('admin.name'),
           'component' =>  '<cve-layout/>',
-          'children' => [
+          'originalChildren' => [
               'model'  =>  [
                   'system',
                   'upload',
