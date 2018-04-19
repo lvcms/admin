@@ -12,6 +12,8 @@ return [
           'path'  =>  config('admin.uri'),
           'name'  =>  config('admin.name'),
           'component' =>  '<cve-layout/>',
+          "children" => [
+          ],
           'originalChildren' => [
               'model'  =>  [
                   'system',
@@ -21,13 +23,6 @@ return [
                   'permission',
               ],
               'component' =>  '<bve-index/>',
-          ],
-          "children" => [
-              [
-                "path" => "admin/asystem",
-                "name" => "adminAsystem",
-                "component" => "<bve-index/>"
-              ]
           ]
     ]
 ];
