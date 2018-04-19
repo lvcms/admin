@@ -11,7 +11,16 @@ return [
     ],[
           'path'  =>  config('admin.uri'),
           'name'  =>  config('admin.name'),
-          'apiUrl'  =>  null,
-          'component' =>  '<cve-layout/>'
+          'component' =>  '<cve-layout/>',
+          'children' => [
+              'model'  =>  [
+                  'system',
+                  'upload',
+                  'users',
+                  'roles',
+                  'permission',
+              ],
+              'component' =>  '<bve-index/>',
+          ]
     ]
 ];
