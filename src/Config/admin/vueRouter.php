@@ -6,7 +6,7 @@
 return [
     [
         'path'  =>  config('admin.uri').'/login',
-        'name'  =>  config('admin.name').'.login',
+        'name'  =>  config('admin.name').'Login',
         'component' =>  '<cve-login/>'
     ],[
           'path'  =>  config('admin.uri'),
@@ -21,6 +21,13 @@ return [
                   'permission',
               ],
               'component' =>  '<bve-index/>',
+          ],
+          "children" => [
+              [
+                "path" => "admin/asystem",
+                "name" => "adminAsystem",
+                "component" => "<bve-index/>"
+              ]
           ]
     ]
 ];

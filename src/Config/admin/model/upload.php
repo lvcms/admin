@@ -7,7 +7,7 @@
      'title'   => '上传管理',
      //前端路由
      'path'   => config('admin.uri').'/upload',
-     // graphql  查询字段
-     'graphql' => config('admin.name').'Upload',
+     //前端路由名称  graphql 查询字段根据这个名称
+     'name'  => config('admin.name').'Upload',
 
 ];
