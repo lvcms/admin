@@ -7,11 +7,11 @@ return [
     [
         'path'  =>  config('admin.uri').'/login',
         'name'  =>  config('admin.name').'Login',
-        'component' =>  '<cve-login/>'
+        'component' =>  ['template'=> '<cve-login/>'],
     ],[
           'path'  =>  config('admin.uri'),
           'name'  =>  config('admin.name'),
-          'component' =>  '<cve-layout/>',
+          'component' =>  ['template'=> '<cve-layout/>'],
           "children" => [
           ],
           'originalChildren' => [
@@ -22,7 +22,7 @@ return [
                   'roles',
                   'permission',
               ],
-              'component' =>  '<bve-index/>',
+              'component' =>  ['template'=> '<bve-index/>'],
           ]
     ]
 ];
