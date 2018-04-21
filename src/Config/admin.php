@@ -3,9 +3,9 @@
 return [
     // 模块名称
     'name' => 'admin',
-    
-    // 后台的 URI 入口
-    'uri' => 'admin',
+
+    // 后台的 URI 入口 必须以 / 开头
+    'uri' => '/admin',
 
     // 后台专属域名，没有的话可以留空
     'domain' => '',
