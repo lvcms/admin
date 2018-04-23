@@ -1,17 +1,22 @@
 <?php
 /**
  * 后台侧边栏菜单
+ * onlyModel 一级路由直接绑定配置文件
  */
 return [
-    '系统功能' => [
-        'system',
+    [
+        'onlyModel' => 'system'
     ],
     '媒体中心' => [
-        'upload',
+        'icon' => '',
+        'model' => ['upload']
     ],
     '用户权限' => [
-        'users',
-        'roles',
-        'permission',
+        'icon' => '',
+        'model' => [
+            'users',
+            'roles',
+            'permission',
+        ]
     ],
 ];
