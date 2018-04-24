@@ -9,12 +9,12 @@ return [
     ],
     [
         'title' => '媒体中心',
-        'icon' => '',
+        'icon'   => 'fa fa-cloud-upload',
         'model' => ['upload']
     ],
     [
         'title' => '用户权限',
-        'icon' => '',
+        'icon'   => 'fa fa-cloud-upload',
         'model' => [
             'users',
             'roles',

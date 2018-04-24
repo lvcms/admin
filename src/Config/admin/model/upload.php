@@ -5,9 +5,10 @@
  return [
      // 菜单名称
      'title'   => '上传管理',
-     //前端路由
-     'path'   => config('admin.uri').'/upload',
+     'icon'   => 'fa fa-cloud-upload',
      //前端路由名称  graphql 查询字段根据这个名称
      'name'  => config('admin.name').'Upload',
+     //前端路由路径
+     'path'   => config('admin.uri').'/upload',
 
 ];
