@@ -14,7 +14,7 @@ return [
     ],
     [
         'title' => '用户权限',
-        'icon'   => 'fa fa-cloud-upload',
+        'icon'   => 'fa fa-unlock-alt',
         'model' => [
             'users',
             'roles',
