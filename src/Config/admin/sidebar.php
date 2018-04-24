@@ -5,13 +5,15 @@
  */
 return [
     [
-        'onlyModel' => 'system'
+        'model' => 'system'
     ],
-    '媒体中心' => [
+    [
+        'title' => '媒体中心',
         'icon' => '',
         'model' => ['upload']
     ],
-    '用户权限' => [
+    [
+        'title' => '用户权限',
         'icon' => '',
         'model' => [
             'users',
