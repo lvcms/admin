@@ -9,7 +9,7 @@ return [
     ],
     [
         'title' => '媒体中心',
-        'icon'   => 'fa fa-cloud-upload',
+        'icon'   => 'fa fa-medium',
         'model' => ['upload']
     ],
     [
