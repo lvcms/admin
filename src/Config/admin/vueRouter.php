@@ -6,7 +6,7 @@
 return [
     [
         'path'  =>  config('admin.uri').'/login',
-        'name'  =>  config('admin.name').'Login',
+        'name'  =>  config('admin.name').':login',
         'component' =>  ['template'=> '<cvi-login/>'],
     ],[
           'path'  =>  config('admin.uri'),

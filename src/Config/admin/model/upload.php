@@ -7,7 +7,7 @@
      'title'   => '上传管理',
      'icon'   => 'fa fa-cloud-upload',
      //前端路由名称  graphql 查询字段根据这个名称
-     'name'  => config('admin.name').'Upload',
+     'name'  => config('admin.name').':upload',
      //前端路由路径
      'path'   => config('admin.uri').'/upload',
 
