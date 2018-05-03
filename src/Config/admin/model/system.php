@@ -10,5 +10,29 @@
      'name'  => config('admin.name').':system',
      //前端路由
      'path'   => config('admin.uri').'/system',
+     // 默认索引页面
+     'index' => [
+        'formItem'
+     ],
+
+     'layout' => config('admin.layout.row'),
+
+     'formItem' => [
+        'col' => config('admin.layout.col'),
+        'form' => [
+            'mobile' => [
+                'type' => 'text',
+                'title' => '手机',
+                // 字数限制
+                'limit' => 50,
+                'default' => '13954386521',
+            ],
+            'integral' => [
+                'type' => 'text',
+                'title' => '用户积分',
+                'type' => 'textarea',
+            ]
+        ]
+     ]
 
 ];
