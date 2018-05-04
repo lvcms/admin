@@ -22,7 +22,7 @@ return [
                   'roles',
                   'permission',
               ],
-              'component' =>  ['template'=> '<bvi-index/>'],
+              'component' =>  ['template'=> '<jvi-index/>'],
           ]
     ]
 ];
