@@ -14,8 +14,36 @@
      'index' => [
         'form1'
      ],
-
-     'layout' => config('admin.layout.row'),
+     'layout' =>[
+        [
+            array_merge(config('admin.layout.col'),[
+                'content' => [
+                    [
+                        'style' => 'col',
+                        'span' => 24,
+                        'content' => [
+                            'style' => 'builJson',
+                            'form' => [
+                                'mobile' => [
+                                    'type' => 'text',
+                                    'title' => '手机',
+                                    // 字数限制
+                                    'limit' => 50,
+                                    'default' => '13954386521',
+                                ],
+                                'integral' => [
+                                    'type' => 'text',
+                                    'title' => '用户积分',
+                                    'type' => 'textarea',
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]),
+        ],
+     ],
+     // 'layout' => config('admin.layout.row'),
      // 索引项目
      'item' => [
          'form1' => [
