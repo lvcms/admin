@@ -22,37 +22,40 @@ return [
                    'config' => config('admin.layout.col'),
                    'content' => [
                        'style' => 'item',
-                       'config' => 'form1'
+                       'config' => [
+                           'card' => [
+                               'title' => '系统设置',
+                               'icon' => 'fa fa-cog',
+                           ],
+                           'item' => 'form1'
+                       ],
                    ]
                ],
-               [
-                  'style' => 'col',
-                  'config' => config('admin.layout.col'),
-                  'content' => [
-                      'style' => 'item',
-                      'config' => 'form2'
-                  ]
-               ]
             ],
         ]
      ],
      // 索引项目
      'item' => [
          'form1' => [
-            'form' => [
-                'mobile' => [
-                    'type' => 'text',
-                    'title' => '手机',
-                    // 字数限制
-                    'limit' => 50,
-                    'default' => '13954386521',
-                ],
-                'integral' => [
-                    'type' => 'text',
-                    'title' => '用户积分',
-                    'type' => 'textarea',
-                ]
-            ]
+              'style' => 'form',
+              'config' => [
+                  //全局唯一识别 不能有重复
+                  'ref' => 'admin:system:form1',
+              ],
+              'item' => [
+                  'mobile' => [
+                      'type' => 'text',
+                      'title' => '手机',
+                      // 字数限制
+                      'limit' => 50,
+                      'default' => '13954386521',
+                  ],
+                  'integral' => [
+                      'type' => 'text',
+                      'title' => '用户积分',
+                      'type' => 'textarea',
+                  ]
+              ]
          ]
      ]
 
