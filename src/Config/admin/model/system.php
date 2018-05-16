@@ -41,18 +41,19 @@ return [
               'config' => [
                   //全局唯一识别 不能有重复
                   'ref' => 'admin:system:form1',
+                  'labelWidth' => 80,
               ],
               'item' => [
                   'mobile' => [
-                      'type' => 'text',
-                      'title' => '手机',
-                      // 字数限制
-                      'limit' => 50,
+                      'component' => 'input',
+                      'label' => '手机',
+                      // 最大输入长度
+                      'maxlength' => 50,
                       'default' => '13954386521',
                   ],
                   'integral' => [
-                      'type' => 'text',
-                      'title' => '用户积分',
+                      'component' => 'input',
+                      'label' => '用户积分',
                       'type' => 'textarea',
                   ]
               ]
