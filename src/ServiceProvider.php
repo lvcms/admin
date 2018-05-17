@@ -13,9 +13,17 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function boot()
     {
+        //加载artisan commands
+        $this->commands([
+            \Laracore\Admin\App\Console\InstallCommand::class,
+            \Laracore\Admin\App\Console\UninstallCommand::class,
+        ]);
+        // 发布配置文件
         $this->publishes([
               __DIR__.'/Config/admin.php' => config_path('admin.php'),
-          ]);
+          ], 'admin:config');
+        //迁移文件配置
+        $this->loadMigrationsFrom(__DIR__.'/Databases/migrations');
     }
 
     /**
