@@ -12,7 +12,7 @@ return [
      //前端路由
      'path'   => config('admin.uri').'/system',
      // 数据模型，用作数据的 CRUD
-     'model'   => Laracore\Admin\App\Models\System::class,
+     'model'   => Laracore\Admin\App\Models\Config::class,
      // 数据存放方式
      'arrangement' => [
          'column' => false,
@@ -52,19 +52,32 @@ return [
                   'labelWidth' => 80,
               ],
               'item' => [
-                  'mobile' => [
+                  'TOGGLE_WEB_SITE' => [
                       'component' => 'input',
-                      'label' => '手机',
+                      'label' => '站点开关',
+                      'placeholder' => '站点关闭后将不能访问',
                       // 最大输入长度
                       'maxlength' => 50,
-                      // 默认值
-                      'default' => '13954386521',
                   ],
-                  'integral' => [
+                  'TOGGLE_WEB_SITE' => [
                       'component' => 'input',
-                      'label' => '用户积分',
+                      'label' => '网站标题',
+                      // 最大输入长度
+                      'maxlength' => 50,
+                      'placeholder' => '网站标题前台显示标题',
+                  ],
+                  'WEB_SITE_SLOGAN' => [
+                      'component' => 'input',
+                      'label' => '网站口号',
+                      // 最大输入长度
+                      'maxlength' => 50,
+                      'placeholder'        => '网站口号、宣传标语、一句话介绍',
+                  ],
+                  'WEB_SITE_LOGO' => [
+                      'component' => 'input',
+                      'label' => '网站LOGO',
                       'type' => 'textarea',
-                      'default' => 3650,
+                      'placeholder'        => '设置网站LOGO',
                   ]
               ]
          ]
