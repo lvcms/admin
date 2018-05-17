@@ -11,6 +11,14 @@ return [
      'name'  => config('admin.name').':system',
      //前端路由
      'path'   => config('admin.uri').'/system',
+     // 数据模型，用作数据的 CRUD
+     'model'   => Laracore\Admin\App\Models\System::class,
+     // 数据存放方式
+     'arrangement' => [
+         'column' => false,
+         'key' => 'key',
+         'value' => 'value',
+     ],
      // 默认布局
      'layout' =>[
         [
@@ -49,12 +57,14 @@ return [
                       'label' => '手机',
                       // 最大输入长度
                       'maxlength' => 50,
+                      // 默认值
                       'default' => '13954386521',
                   ],
                   'integral' => [
                       'component' => 'input',
                       'label' => '用户积分',
                       'type' => 'textarea',
+                      'default' => 3650,
                   ]
               ]
          ]
