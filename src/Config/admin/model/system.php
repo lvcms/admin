@@ -13,12 +13,6 @@ return [
      'path'   => config('admin.uri').'/system',
      // 数据模型，用作数据的 CRUD
      'model'   => Laracore\Admin\App\Models\Config::class,
-     // 数据存放方式
-     'arrangement' => [
-         'column' => false,
-         'key' => 'key',
-         'value' => 'value',
-     ],
      // 默认布局
      'layout' =>[
         [
@@ -39,6 +33,20 @@ return [
                        ],
                    ]
                ],
+               [
+                  'style' => 'col',
+                  'config' => config('admin.layout.col'),
+                  'content' => [
+                      'style' => 'item',
+                      'config' => [
+                          'card' => [
+                              'title' => '系统设置2',
+                              'icon' => 'fa fa-cog',
+                          ],
+                          'item' => 'form2'
+                      ],
+                  ]
+              ],
             ],
         ]
      ],
@@ -53,13 +61,11 @@ return [
               ],
               'item' => [
                   'TOGGLE_WEB_SITE' => [
-                      'component' => 'input',
+                      'component' => 'switch',
                       'label' => '站点开关',
                       'placeholder' => '站点关闭后将不能访问',
-                      // 最大输入长度
-                      'maxlength' => 50,
                   ],
-                  'TOGGLE_WEB_SITE' => [
+                  'WEB_SITE_TITLE' => [
                       'component' => 'input',
                       'label' => '网站标题',
                       // 最大输入长度
@@ -78,6 +84,32 @@ return [
                       'label' => '网站LOGO',
                       'type' => 'textarea',
                       'placeholder'        => '设置网站LOGO',
+                      'default' => '没有logo',
+                  ]
+              ]
+         ],
+         'form2' => [
+              'style' => 'form',
+              'config' => [
+                  //全局唯一识别 不能有重复
+                  'ref' => 'admin:system:form2',
+                  'labelWidth' => 90,
+              ],
+              'item' => [
+                  'UPLOAD_FILE_SIZE' => [
+                      'component' => 'input',
+                      'label' => '文件上传大小',
+                      'placeholder' => '文件上传大小单位：MB',
+                  ],
+                  'UPLOAD_IMAGE_SIZE' => [
+                      'component' => 'input',
+                      'label' => '图片上传大小',
+                      'placeholder' => '图片上传大小单位：MB',
+                  ],
+                  'ADMIN_PAGE_SIZE' => [
+                      'component' => 'input',
+                      'label' => '分页数量',
+                      'placeholder' => '分页时每页的记录数',
                   ]
               ]
          ]
