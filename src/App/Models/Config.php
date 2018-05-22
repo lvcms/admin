@@ -7,4 +7,6 @@ use Laracore\Core\App\Models\Model;
 class Config extends Model
 {
     public $table = 'admin_configs';
+    
+    public $timestamps = false;
 }
