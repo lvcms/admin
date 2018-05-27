@@ -26,10 +26,10 @@ return [
                        'style' => 'item',
                        'config' => [
                            'card' => [
-                               'title' => '系统设置',
+                               'title' => '网站设置',
                                'icon' => 'fa fa-cog',
                            ],
-                           'item' => 'form1'
+                           'item' => 'formWeb'
                        ],
                    ]
                ],
@@ -40,10 +40,10 @@ return [
                       'style' => 'item',
                       'config' => [
                           'card' => [
-                              'title' => '系统设置2',
+                              'title' => '系统参数',
                               'icon' => 'fa fa-cog',
                           ],
-                          'item' => 'form2'
+                          'item' => 'formSystem'
                       ],
                   ]
               ],
@@ -52,7 +52,7 @@ return [
      ],
      // 索引项目
      'item' => [
-         'form1' => [
+         'formWeb' => [
               'style' => 'form',
               'config' => [
                   //全局唯一识别 不能有重复
@@ -84,11 +84,44 @@ return [
                       'label' => '网站LOGO',
                       'type' => 'textarea',
                       'placeholder'        => '设置网站LOGO',
-                      'default' => '没有logo',
+                  ],
+                  'WEB_SITE_DESCRIPTION' => [
+                      'component' => 'input',
+                      'label' => '网站描述',
+                      'type' => 'textarea',
+                      'placeholder' => '网站搜索引擎描述',
+                      'autosize' => [
+                          'minRows' => 2,
+                          'maxRows' => 5
+                      ],
+                  ],
+                  'WEB_SITE_KEYWORD' => [
+                      'component' => 'input',
+                      'label' => '网站关键字',
+                      'type' => 'textarea',
+                      'placeholder'        => '网站搜索引擎关键字',
+                  ],
+                  'WEB_SITE_COPYRIGHT' => [
+                      'component' => 'input',
+                      'label' => '版权信息',
+                      'type' => 'text',
+                      'placeholder'        => '设置在网站底部显示的版权信息，如“版权所有 © 2007-2017 某某科技”',
+                  ],
+                  'WEB_SITE_ICP' => [
+                      'component' => 'input',
+                      'label' => '网站备案号',
+                      'type' => 'text',
+                      'placeholder'        => '设置在网站底部显示的备案号，如“鲁ICP备1272117-1号”',
+                  ],
+                  'WEB_SITE_STATISTICS' => [
+                      'component' => 'input',
+                      'label' => '站点统计',
+                      'type' => 'textarea',
+                      'placeholder'        => '支持百度、Google、cnzz等所有Javascript的统计代码',
                   ]
               ]
          ],
-         'form2' => [
+         'formSystem' => [
               'style' => 'form',
               'config' => [
                   //全局唯一识别 不能有重复
@@ -97,9 +130,30 @@ return [
               ],
               'item' => [
                   'UPLOAD_FILE_SIZE' => [
-                      'component' => 'input',
+                      'component' => 'checkbox',
                       'label' => '文件上传大小',
                       'placeholder' => '文件上传大小单位：MB',
+                      'allSelect' => true,
+                      'allSelectName' => '全国',
+                      'options' => [
+                          [
+                              'label' => 'demo',
+                              'title' => '测试',
+                              'icon' => 'fa fa-cog fa-spin',
+                          ],
+                          [
+                              'label' => 'demo1',
+                              'title' => '测试1',
+                              'disabled' => true,
+                              'size' => 'small',
+                              'icon' => 'fa fa-unlock-alt',
+                          ],
+                          [
+                              'label' => 'demo2',
+                              'title' => '测试2',
+                              'icon' => 'fa fa-medium',
+                          ],
+                      ]
                   ],
                   'UPLOAD_IMAGE_SIZE' => [
                       'component' => 'input',
