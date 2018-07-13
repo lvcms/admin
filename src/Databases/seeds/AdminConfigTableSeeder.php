@@ -77,5 +77,12 @@ class AdminConfigTableSeeder extends Seeder
             'key'      => 'ENTRUST_GROUP_LIST',
             'value'     => 'global:全局,admin:后台,cms:CMS,shop:商城',
         ]);
+
+        DB::table('admin_configs')->insert([
+            'key'      => 'DEMO_CHECKBOX',
+        ]);
+        DB::table('admin_configs')->insert([
+            'key'      => 'DEMO_SELECT',
+        ]);
     }
 }
