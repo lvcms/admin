@@ -17,11 +17,11 @@ return [
      'layout' =>[
         [
             'style' => 'row',
-            'config' => config('admin.layout.row'),
+            // 'config' => config('admin.layout.row'),
             'content' => [
                 [
                    'style' => 'col',
-                   'config' => config('admin.layout.col'),
+                //    'config' => config('admin.layout.col'),
                    'content' => [
                        'style' => 'item',
                        'config' => [
@@ -35,7 +35,7 @@ return [
                ],
                [
                   'style' => 'col',
-                  'config' => config('admin.layout.col'),
+                //   'config' => config('admin.layout.col'),
                   'content' => [
                       'style' => 'item',
                       'config' => [
