@@ -1,7 +1,7 @@
 {
     "name": "lvcmf/admin",
     "type": "library",
-    "description": ":后台管理系统 admin 使用自动构建html",
+    "description": ":后台管理系统 admin 使用自动构建 html",
     "keywords": [
         "lvcmf",
         "admin"
