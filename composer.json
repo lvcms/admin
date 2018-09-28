@@ -1,12 +1,12 @@
 {
-    "name": "laracore/admin",
+    "name": "lvcmf/admin",
     "type": "library",
     "description": ":后台管理系统 admin 使用自动构建html",
     "keywords": [
-        "laracore",
+        "lvcmf",
         "admin"
     ],
-    "homepage": "https://github.com/laracore/admin",
+    "homepage": "https://github.com/lvcmf/admin",
     "license": "MIT",
     "authors": [
         {
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Laracore\\Admin\\": "src"
+            "Lvcmf\\Admin\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Laracore\\Admin\\": "tests"
+            "Lvcmf\\Admin\\": "tests"
         }
     },
     "scripts": {
@@ -43,17 +43,17 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         },
-        "laracore": {
+        "lvcmf": {
             "name": "admin",
             "title": "后台管理系统",
             "description": "后台管理系统 admin 使用自动构建html",
             "author": "BigRocs",
             "version": "1.0.1",
             "providers": [
-                "Laracore\\Admin\\AdminServiceProvider"
+                "Lvcmf\\Admin\\AdminServiceProvider"
             ],
-            "install": "laracore:admin:install",
-            "uninstall": "laracore:admin:uninstall"
+            "install": "lvcmf:admin:install",
+            "uninstall": "lvcmf:admin:uninstall"
         }
     },
     "config": {

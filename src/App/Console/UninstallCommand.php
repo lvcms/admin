@@ -1,9 +1,9 @@
 <?php
 
-namespace Laracore\Admin\App\Console;
+namespace Lvcmf\Admin\App\Console;
 
 use Illuminate\Console\Command;
-use Laracore\Core\Framework\Commands\Uninstall;
+use Lvcmf\Core\Framework\Commands\Uninstall;
 
 class UninstallCommand extends Command
 {
@@ -14,7 +14,7 @@ class UninstallCommand extends Command
      * @var string
      * @translator laravelacademy.org
      */
-    protected $signature = 'laracore:admin:uninstall';
+    protected $signature = 'lvcmf:admin:uninstall';
 
     /**
      * The console command description.

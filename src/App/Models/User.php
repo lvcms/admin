@@ -1,9 +1,9 @@
 <?php
 
-namespace Laracore\Admin\App\Models;
+namespace Lvcmf\Admin\App\Models;
 
 use Auth;
-use Laracore\Core\App\Models\User as CoreUser;
+use Lvcmf\Core\App\Models\User as CoreUser;
 
 class User extends CoreUser
 {

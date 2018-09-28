@@ -12,7 +12,7 @@ return [
      //前端路由
      'path'   => config('admin.uri').'/system',
      // 数据模型，用作数据的 CRUD
-     'model'   => Laracore\Admin\App\Models\Config::class,
+     'model'   => Lvcmf\Admin\App\Models\Config::class,
      // 默认布局
      'layout' =>[
         [

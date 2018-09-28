@@ -1,6 +1,6 @@
 <?php
 
-namespace Laracore\Admin\App\Models;
+namespace Lvcmf\Admin\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
