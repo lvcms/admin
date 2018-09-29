@@ -36,7 +36,6 @@ class UninstallCommand extends Command
      */
     public function handle()
     {
-        //删除对应数据库数据
-        $this->info($this->uninstall->dropTable('admin_configs'));
+        $this->info($this->uninstall->dropConfig('admin')); // 清初 admin 扩展包配置数据
     }
 }

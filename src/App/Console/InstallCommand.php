@@ -40,8 +40,7 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $this->info($this->install->call('migrate'));
         $this->info($this->install->publish('admin:config'));
-        $this->info($this->install->seed(\Lvcmf\Admin\Databases\seeds\AdminConfigTableSeeder::class));
+        $this->info($this->install->seed(\Lvcmf\Admin\Databases\seeds\ConfigTableSeeder::class));
     }
 }
