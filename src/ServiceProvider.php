@@ -23,6 +23,7 @@ class ServiceProvider extends LaravelServiceProvider
         // 发布配置文件
         $this->publishes([
               __DIR__.'/Config/admin.php' => config_path('admin.php'),
+              __DIR__.'/Config/admin' => config_path('admin'),
           ], 'admin:config');
     }
 
