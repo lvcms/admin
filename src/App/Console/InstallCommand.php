@@ -40,7 +40,21 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+        $this->vueAdminLink();
         $this->info($this->install->publish('admin:config'));
         $this->info($this->install->seed(\Lvcmf\Admin\Databases\seeds\ConfigTableSeeder::class));
+    }
+    /**
+     * 创建软连接
+     */
+    public function vueAdminLink()
+    {
+        if (file_exists(public_path('vendor/admin'))) {
+            $this->error('The "public/vendor/admin" directory already exists.');
+        }
+        $this->laravel->make('files')->link(
+            base_path('vendor/lvcmf/vue-admin/dist/vendor/admin'), public_path('vendor/admin')
+        );
+        $this->info('The [public/vendor/admin] directory has been linked.');
     }
 }
