@@ -1,9 +1,9 @@
 <?php
 
-namespace Lvcmf\Admin\App\Console;
+namespace Lvcms\Admin\App\Console;
 
 use Illuminate\Console\Command;
-use Lvcmf\Core\Framework\Commands\Install;
+use Lvcms\Core\Framework\Commands\Install;
 
 class InstallCommand extends Command
 {
@@ -18,7 +18,7 @@ class InstallCommand extends Command
      * @var string
      * @translator laravelacademy.org
      */
-    protected $signature = 'lvcmf:admin:install';
+    protected $signature = 'lvcms:admin:install';
 
     /**
      * The console command description.
@@ -42,7 +42,7 @@ class InstallCommand extends Command
     {
         $this->vueAdminLink();
         $this->info($this->install->publish('admin:config'));
-        $this->info($this->install->seed(\Lvcmf\Admin\Databases\seeds\ConfigTableSeeder::class));
+        $this->info($this->install->seed(\Lvcms\Admin\Databases\seeds\ConfigTableSeeder::class));
     }
     /**
      * 创建软连接
@@ -53,7 +53,7 @@ class InstallCommand extends Command
             $this->error('The "public/vendor/admin" directory already exists.');
         }
         $this->laravel->make('files')->link(
-            base_path('vendor/lvcmf/vue-admin/dist/vendor/admin'), public_path('vendor/admin')
+            base_path('vendor/lvcms/vue-admin/dist/vendor/admin'), public_path('vendor/admin')
         );
         $this->info('The [public/vendor/admin] directory has been linked.');
     }

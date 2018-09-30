@@ -1,6 +1,6 @@
 <?php
 
-namespace Lvcmf\Admin;
+namespace Lvcms\Admin;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
@@ -15,8 +15,8 @@ class ServiceProvider extends LaravelServiceProvider
     {
         //加载artisan commands
         $this->commands([
-            \Lvcmf\Admin\App\Console\InstallCommand::class,
-            \Lvcmf\Admin\App\Console\UninstallCommand::class,
+            \Lvcms\Admin\App\Console\InstallCommand::class,
+            \Lvcms\Admin\App\Console\UninstallCommand::class,
         ]);
         //迁移文件配置
         $this->loadMigrationsFrom(__DIR__.'/Databases/migrations');

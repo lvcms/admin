@@ -1,9 +1,9 @@
 <?php
 
-namespace Lvcmf\Admin\App\Models;
+namespace Lvcms\Admin\App\Models;
 
 use Auth;
-use Lvcmf\Core\App\Models\User as CoreUser;
+use Lvcms\Core\App\Models\User as CoreUser;
 
 class User extends CoreUser
 {

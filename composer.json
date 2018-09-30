@@ -1,12 +1,12 @@
 {
-    "name": "lvcmf/admin",
+    "name": "lvcms/admin",
     "type": "library",
     "description": ":后台管理系统 admin 使用自动构建 html",
     "keywords": [
-        "lvcmf",
+        "lvcms",
         "admin"
     ],
-    "homepage": "https://github.com/lvcmf/admin",
+    "homepage": "https://github.com/lvcms/admin",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +18,7 @@
     ],
     "require": {
         "laravel/framework": "~5.7",
-        "lvcmf/core": "~1.0"
+        "lvcms/core": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=5.4.3",
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Lvcmf\\Admin\\": "src"
+            "Lvcms\\Admin\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Lvcmf\\Admin\\": "tests"
+            "Lvcms\\Admin\\": "tests"
         }
     },
     "scripts": {
@@ -45,20 +45,20 @@
         },
         "laravel": {
             "providers": [
-                "Lvcmf\\Admin\\ServiceProvider"
+                "Lvcms\\Admin\\ServiceProvider"
             ]
         },
-        "lvcmf": {
+        "lvcms": {
             "name": "admin",
             "title": "后台管理系统",
             "description": "后台管理系统 admin 使用自动构建html",
             "author": "BigRocs",
             "version": "1.0.1",
             "providers": [
-                "Lvcmf\\Admin\\ServiceProvider"
+                "Lvcms\\Admin\\ServiceProvider"
             ],
-            "install": "lvcmf:admin:install",
-            "uninstall": "lvcmf:admin:uninstall"
+            "install": "lvcms:admin:install",
+            "uninstall": "lvcms:admin:uninstall"
         }
     },
     "config": {

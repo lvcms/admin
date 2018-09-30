@@ -1,6 +1,6 @@
 <?php
 
-namespace Lvcmf\Admin\App\Models;
+namespace Lvcms\Admin\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

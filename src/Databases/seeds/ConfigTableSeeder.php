@@ -1,5 +1,5 @@
 <?php
-namespace Lvcmf\Admin\Databases\seeds;
+namespace Lvcms\Admin\Databases\seeds;
 
 use DB;
 use Illuminate\Database\Seeder;

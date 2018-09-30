@@ -1,7 +1,7 @@
 
 ## 项目概述
 
-* 产品名称：Lvcmf Admin
+* 产品名称：Lvcms Admin
 * 项目代号：Admin
 * 官方地址：
 
