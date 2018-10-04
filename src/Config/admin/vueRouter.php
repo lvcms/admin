@@ -5,7 +5,7 @@
  */
 return [
     [
-        'path'  =>  '/login',
+        'path'  =>  'login',
         'name'  =>  ':as:login',
         'component' =>  ['template'=> '<cvi-login/>'],
         "children" => [
