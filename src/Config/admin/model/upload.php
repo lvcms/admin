@@ -168,21 +168,31 @@ return [
                                         "type" => 'success',
                                         "icon" => 'fa fa-check',
                                         "title" => '启用',
-                                        "event" => 'agGrid:open',
+                                        "event" => 'agGrid',
                                         "show" => ['close'],
+                                        "post" => [
+                                            'status' => 'open',
+                                        ],
                                     ],
                                     [
                                         "type" => 'warning',
                                         "icon" => 'fa fa-power-off',
                                         "title" => '关闭',
-                                        "event" => 'agGrid:close',
+                                        "event" => 'agGrid',
                                         "show" => ['open'],
+                                        "post" => [
+                                            'status' => 'close',
+                                        ],
                                     ],
                                     [
                                         "type" => 'error',
                                         "icon" => 'fa fa-trash',
                                         "title" => '删除',
-                                        "event" => 'agGrid:delete',
+                                        "event" => 'agGrid',
+                                        "post" => [
+                                            // 发送 id 时自动处理对应请求 一般用户 deleter 删除
+                                            'id' => 'delete',
+                                        ],
                                     ],
                                 ],
                             ],
