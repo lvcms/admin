@@ -196,9 +196,9 @@ return [
                           ],
                       ]
                 ],
-                'DEMO_TABLE' => [
-                    'component' => 'table',
-                ],
+                // 'DEMO_TABLE' => [
+                //     'component' => 'table',
+                // ],
                 'submit' => [
                     'component' => 'button',
                     'title' => '提交',
