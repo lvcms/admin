@@ -166,6 +166,15 @@
                             "params"=>[
                                 "buttons" =>[
                                     [
+                                        "type"=>'primary',
+                                        "icon"=>'fa fa-edit',
+                                        "title"=> '编辑',
+                                        "event"=> 'agGridEdit',
+                                        "postParams" => [
+                                            'status' => 'open'
+                                        ]
+                                    ],
+                                    [
                                         "type"=>'success',
                                         "icon"=>'fa fa-check',
                                         "title"=> '启用',
@@ -203,6 +212,12 @@
                                         "postParams" => [
                                             // 发送 id 时自动处理对应请求 一般用户 deleter 删除
                                             'handler' => 'delete'
+                                        ],
+                                        "confirm" => [
+                                            'title' => '删除文件',
+                                            'content' => '此操作将永久删除文件, 是否继续?',
+                                            'cancel' => '取消删除操作',
+                                            'okText' => '删除',
                                         ]
                                     ],
                                 ]
