@@ -32,15 +32,15 @@
                    ],
                    'content' => [
                        [
-                            'style' => 'item',
+                            'style' => 'card',
                             'config' => [
-                                'card' => [
-                                    'title' => '欢迎登陆',
-                                    'icon' => 'fa fa-arrow-circle-right',
-                                ],
-                                'item' => 'formLogin'
+                                'title' => '欢迎登陆',
+                                'icon' => 'fa fa-arrow-circle-right',
                             ],
-                       ]
+                            'content' => [
+                                'item' => 'formLogin',
+                            ]
+                        ],
                    ]
                ],
            ]
@@ -50,11 +50,9 @@
     'item' => [
         'formLogin' => [
              'style' => 'form',
-             // 不需要获取 value
-             'isValue' => false,
              'config' => [
-                 //全局唯一识别 不能有重复
-                 'ref' => 'admin:login:formLogin',
+                // 不需要获取 value
+                'isValue' => false,
              ],
              'item' => [
                  'username' => [
@@ -77,7 +75,7 @@
                     'title' => '提交',
                     'type' => 'primary',
                     'long' => true,
-                    'event' => 'form-submit', // 触发前端事件 form 提交表单
+                    'event' => ['formSubmit'], // 触发前端事件 form 提交表单
                     'isValue' => false, //是否允许前端获取这个的 value 值 默认 true
                 ],
              ]

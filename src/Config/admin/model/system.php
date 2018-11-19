@@ -25,31 +25,31 @@ return [
                 //    'config' => config('admin.layout.col'),
                    'content' => [
                        [
-                            'style' => 'item',
+                            'style' => 'card',
                             'config' => [
-                                'card' => [
-                                    'title' => '网站设置',
-                                    'icon' => 'fa fa-cog',
-                                ],
-                                'item' => 'formWeb'
+                                'title' => '网站设置',
+                                'icon' => 'fa fa-cog',
                             ],
-                       ]
+                            'content' => [
+                                'item' => 'formWeb',
+                            ]
+                        ],
                    ]
                ],
                [
                   'style' => 'col',
                 //   'config' => config('admin.layout.col'),
                   'content' => [
-                      [
-                            'style' => 'item',
+                        [
+                            'style' => 'card',
                             'config' => [
-                                'card' => [
-                                    'title' => '表单演示',
-                                    'icon' => 'fa fa-cog',
-                                ],
-                                'item' => 'formSystem'
+                                'title' => '表单演示',
+                                'icon' => 'fa fa-cog',
                             ],
-                      ]
+                            'content' => [
+                                'item' => 'formSystem',
+                            ]
+                        ],
                   ]
               ],
             ],
@@ -129,7 +129,7 @@ return [
                     'title' => '提交',
                     'type' => 'primary',
                     'long' => true,
-                    'event' => 'form-submit', // 触发前端事件 form 提交表单
+                    'event' => ['formSubmit'], // 触发前端事件 form 提交表单
                     'isValue' => false, //是否允许前端获取这个的 value 值 默认 true
                 ],
                 'reset' => [
@@ -137,7 +137,7 @@ return [
                     'title' => '重置',
                     'type' => 'default',
                     'long' => true,
-                    'event' => 'form-reset', // 触发前端事件 form 重置表单
+                    'event' => ['formReset'], // 触发前端事件 form 重置表单
                     'isValue' => false, //是否允许前端获取这个的 value 值 默认 true
                 ],
             ]
@@ -204,7 +204,7 @@ return [
                     'title' => '提交',
                     'type' => 'primary',
                     'long' => true,
-                    'event' => 'form-submit', // 触发前端事件 form 提交表单
+                    'event' => ['formSubmit'], // 触发前端事件 form 提交表单
                     'isValue' => false, //是否允许前端获取这个的 value 值 默认 true
                 ],
                 'reset' => [
@@ -212,7 +212,7 @@ return [
                     'title' => '重置',
                     'type' => 'default',
                     'long' => true,
-                    'event' => 'form-reset', // 触发前端事件 form 重置表单
+                    'event' => ['formReset'], // 触发前端事件 form 重置表单
                     'isValue' => false, //是否允许前端获取这个的 value 值 默认 true
                 ],
             ]
